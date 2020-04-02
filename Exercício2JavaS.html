@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercício 02</title>
+        <style type="text/css">
+            .btn {
+                width: 150px;
+                height: 50px;
+                border: 1px solid black
+            }
+            .red {
+                background-color: red
+            }
+            .green {
+                background-color: green
+            }
+            .blue {
+                background-color: blue
+            }
+            .yellow {
+                background-color: yellow
+            }
+        </style>
+    </head>
+    <body>
+
+        <a href="#" class="btn red">Vermelho</a>
+        <a href="#" class="btn green">Verde</a>
+        <a href="#" class="btn blue">Azul</a>
+        <a href="#" class="btn yellow">Azul</a>
+
+
+        <script type="text/javascript">
+            var main = document.getElementsByTagName("body")
+            var red = document.getElementsByClassName("btn red");
+            var green = document.getElementsByClassName("btn green");
+            var blue = document.getElementsByClassName("btn blue");
+            var yellow = document.getElementsByClassName("btn yellow");
+
+            red[0].onmouseover = function(e){
+                e.preventDefault();
+                main[0].style = "background-color: red"
+            }
+            green[0].onmouseover = function(e){
+                e.preventDefault();
+                main[0].style = "background-color: green"
+            }
+            blue[0].onmouseover = function(e){
+                e.preventDefault();
+                main[0].style = "background-color: blue"
+            }
+            yellow[0].onmouseover = function(e){
+                e.preventDefault();
+                main[0].style = "background-color: yellow"
+            }
+
+        </script>
+    </body>
+</html>

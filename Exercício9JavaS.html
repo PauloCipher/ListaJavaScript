@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercício 09</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <input type="text" placeholder="Texto 1"/>
+            <input type="text" placeholder="Texto 2"/>
+            <input type="text" placeholder="Texto 3" disabled/>
+            <button id="inverter">Inverter</button>
+        </form>
+        <script type="text/javascript">
+            var inputs = document.getElementsByTagName("input");
+            var btn = document.getElementById("inverter");
+
+            btn.onclick = function(e){
+                var str1 = inputs[0].value.split("");
+                var str2 = inputs[1].value.split("");
+                var str3 = "";
+                e.preventDefault();
+
+                var tamanho = str1.length >= str2.length ? str1.length : str2.length;
+
+                for(var i = 0; i < tamanho; i++){
+                    str3 += str1[i] + str2[i];
+                }
+
+                inputs[2].value = str3;
+            }
+        </script>
+    </body>
+</html>

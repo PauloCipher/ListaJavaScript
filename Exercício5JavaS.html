@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercício 05</title>
+        <style type="text/css">
+            input, button {
+                display: block;
+                margin: 10px auto
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" id="formulario">
+            <input id="login" type="text" size="45" placeholder="Login"/>
+            <input id="senha" type="password" size="45" placeholder="Senha"/>
+            <input id="confirmar" type="password" size="45" placeholder="Confirmar senha"/>
+            <button type="submit" id="btn">Enviar</button>
+        </form>
+        <script type="text/javascript">
+            var btn = document.getElementById("btn");
+            var formulario = document.getElementById("formulario");
+            var login = document.getElementById("login");
+            var senha = document.getElementById("senha");
+            var confirmar = document.getElementById("confirmar");
+            btn.onclick = function(e){
+                e.preventDefault();
+                if (login.value != "" && senha.value == confirmar.value) {
+                    formulario.submit();
+                } else {
+                    alert("Preencha todos os campos corretamente!");
+                }
+            }
+        </script>
+    </body>
+</html>

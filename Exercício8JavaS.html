@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercício 08</title>
+        <style type="text/css">
+            .form-group {
+                display: block;
+                margin: 10px auto;
+                text-align: center
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" id="formulario" name="formulario">
+            <div class="form-group">
+                <input id="nome" name="nome" type="text" size="45" placeholder="Nome Completo"/>
+            </div>
+            <div class="form-group">
+                <label for="pessoa_fisica">Pessoa Física</label>
+                <input id="pessoa_fisica" name="pessoa" type="radio" value="F" checked/>
+                <label for="pessoa_juridica">Pessoa Jurídica</label>
+                <input id="pessoa_juridica" name="pessoa" type="radio" value="J"/>
+            </div>
+            <div class="form-group">
+                <input id="cpf" type="text" size="45" placeholder="CPF"/>
+                <input id="cnpj" type="text" size="45" placeholder="CNPJ" hidden/>
+                <input id="data_de_nascimento" type="text" size="45" placeholder="Data de nascimento" pattern="[0-9]{8}" title="Informe apenas numeros. Ex.: 01011990" required/>
+            </div>
+            <div class="form-group">
+                <input id="endereco" type="text" size="45" placeholder="Endereço"/>
+                <input id="cep" type="cep" size="45" placeholder="CEP" pattern="[0-9]{8}" title="Informe apenas numeros. Ex.: 71940720" required/>
+            </div>
+            <div class="form-group">
+                <input id="tel" type="tel" size="45" placeholder="Telefone"/>
+                <input id="email" type="email" size="45" placeholder="Email"/>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="btn">Enviar</button>
+            </div>
+        </form method="post">
+        <script type="text/javascript">
+            var btn = document.getElementById("btn");
+            
+            var nome = document.getElementById("nome");
+            var pessoa_fisica = document.getElementsByName("pessoa")[0];
+            var pessoa_juridica = document.getElementsByName("pessoa")[1];
+            var cpf = document.getElementById("cpf");
+            var data_de_nascimento = document.getElementById("data_de_nascimento");
+            var cnpj = document.getElementById("cnpj");
+            var cep = document.getElementById("cep");
+            pessoa_fisica.onclick = function(){
+                nome.setAttribute("placeholder","Nome Completo");
+                cpf.removeAttribute("hidden");
+                data_de_nascimento.removeAttribute("hidden");
+                cnpj.setAttribute("hidden","true");
+            }
+            pessoa_juridica.onclick = function(){
+                nome.setAttribute("placeholder","Razão Social");
+                cpf.setAttribute("hidden", "true");
+                data_de_nascimento.setAttribute("hidden", "true");
+                cnpj.removeAttribute("hidden");
+            }
+        </script>
+    </body>
+</html>

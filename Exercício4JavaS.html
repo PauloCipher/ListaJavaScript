@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercício 04</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <p id="paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae viverra justo, a sagittis mauris. Vivamus in mi et sem interdum vestibulum. Aenean vel ultricies est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lacinia risus id felis ullamcorper, eu ornare leo porttitor. Vivamus luctus orci eu odio maximus lacinia. Curabitur sollicitudin euismod ipsum, eu auctor metus ullamcorper elementum. Nullam maximus mauris sed orci condimentum, eget interdum ligula accumsan. Integer magna ipsum, consectetur sit amet euismod sit amet, placerat ac ante. Vivamus non purus elit. Ut in hendrerit urna. Aliquam dui erat, pretium et tempus quis, convallis non enim. Morbi eget congue neque.</p>
+        <button id="btn">Ocultar</button>
+        <script type="text/javascript">
+            var btn = document.getElementById("btn");
+            var paragrafo = document.getElementById("paragrafo");
+
+            btn.onclick = function(){
+                if (paragrafo.style.display === "none") {
+                    paragrafo.style.display = "block";
+                    this.innerHTML = "Ocultar"
+                } else {
+                    paragrafo.style.display = "none";
+                    this.innerHTML = "Exibir"
+                }
+            }
+        </script>
+    </body>
+</html>

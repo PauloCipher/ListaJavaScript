@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercício 03</title>
+        <style type="text/css">
+            .btn {
+                width: 150px;
+                height: 50px;
+                border: 1px solid black
+            }
+            .red {
+                background-color: red
+            }
+            .green {
+                background-color: green
+            }
+            .blue {
+                background-color: blue
+            }
+            .yellow {
+                background-color: yellow
+            }
+        </style>
+    </head>
+    <body>
+        <select id="selecao">
+            <option value="">Selecione uma opção</option>
+            <option value="red">Vermelho</option>
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+            <option value="yellow">Amarelo</option>
+        </select>
+
+        <script type="text/javascript">
+            var selecao = document.getElementById("selecao");
+            var main = document.getElementsByTagName("body");
+            selecao.onchange = function(){
+                main[0].style="background-color: " + selecao.value
+            }
+
+        </script>
+    </body>
+</html>

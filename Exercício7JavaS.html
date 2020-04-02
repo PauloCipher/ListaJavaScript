@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercício 07</title>
+        <style type="text/css">
+            input, button {
+                display: block;
+                margin: 10px auto
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" id="formulario">
+            <input type="text" size="45"/>
+            <input type="text" size="45"/>
+            <input type="text" size="45"/>
+            <input type="text" size="45"/>
+            <input type="text" size="45"/>
+            <button type="submit" id="btn">Enviar</button>
+        </form>
+        <script type="text/javascript">
+            var btn = document.getElementById("btn");
+            var inputs = document.getElementsByTagName("input");
+            btn.onclick = function(e){
+                e.preventDefault();
+                var arr = new Array();
+                arr.push(inputs[0].value);
+                arr.push(inputs[1].value);
+                arr.push(inputs[2].value);
+                arr.push(inputs[3].value);
+                arr.push(inputs[4].value);
+
+                inputs[0].value = arr[4];
+                inputs[1].value = arr[3];
+                inputs[2].value = arr[2];
+                inputs[3].value = arr[1];
+                inputs[4].value = arr[0];
+            }
+        </script>
+    </body>
+</html>
